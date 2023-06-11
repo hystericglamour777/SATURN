@@ -1,5 +1,5 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
   padding: 0;
   margin: 0;
@@ -7,23 +7,21 @@ body {
 }
 
 :root {
-  /* account for the arrow */
   --actual-height: calc(100vh - 12px);
 }
 
 .myarrow {
   position: relative;
-  /* padding-top: 12px; */
-  padding: 12px 0 0 0 ;
+  padding: 12px 0 0 0;
 }
 
 .myarrow:before {
-  content: '';
+  content: "";
   height: 0;
   width: 0;
   border-width: 0 8px 12px 8px;
   border-style: solid;
-  border-color: transparent transparent white transparent;
+  border-color: transparent transparent transparent transparent;
   position: absolute;
 
   top: 0;
@@ -33,7 +31,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   .myarrow:before {
-    border-color: transparent transparent #343541 transparent !important;
+    border-color: transparent transparent transparent transparent !important;
   }
 }
 
@@ -52,11 +50,10 @@ body {
 }
 
 webview {
-  /* overflow: hidden; */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height:  calc(100vh - 12px);
+  height: calc(100vh - 12px);
   display: inline-flex !important;
 }
