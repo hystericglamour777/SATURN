@@ -11,23 +11,7 @@ module.exports = {
       gatekeeperAssess: false,
     },
   },
-  publishers: [
-    {
-      name: "@electron-forge/publisher-github",
-      config: {
-        repository: {
-          owner: "tpkahlon",
-          name: "jackal-mac",
-        },
-        prerelease: true,
-      },
-    },
-  ],
   makers: [
-    {
-      name: "@electron-forge/maker-zip",
-      config: {},
-    },
     {
       name: "@electron-forge/maker-squirrel",
       config: {},
@@ -37,13 +21,17 @@ module.exports = {
       platforms: ["darwin"],
       config: {},
     },
-    {
-      name: "@electron-forge/maker-deb",
-      config: {},
-    },
-    {
-      name: "@electron-forge/maker-rpm",
-      config: {},
-    },
+    // {
+    //   name: "@electron-forge/maker-zip",
+    //   config: {},
+    // },
+    // {
+    //   name: "@electron-forge/maker-deb",
+    //   config: {},
+    // },
+    // {
+    //   name: "@electron-forge/maker-rpm",
+    //   config: {},
+    // },
   ],
 };
