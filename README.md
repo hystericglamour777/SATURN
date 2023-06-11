@@ -21,4 +21,4 @@ Anytime you want to use `Jackal` on `Mac`, you need to follow above steps.
 
 ## Credit
 
-Special credit goes to [@vincelwt](https://twitter.com/vincelwt) who made `ChatGPT for Mac``.
+Special credit goes to [@vincelwt](https://twitter.com/vincelwt) who made `ChatGPT for Mac`.
