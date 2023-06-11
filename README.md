@@ -10,8 +10,8 @@ You can use Cmd+Shift+G (Mac) or Ctrl+Shift+G (Win) to quickly open it from anyw
 
 Download:
 
-- [Mac Arm64 .dmg](https://github.com/tpkahlon/jackal-mac/releases/download/v0.0.1/Jackal-0.0.1-arm64.dmg)
-- [Mac Intel .dmg](https://github.com/tpkahlon/jackal-mac/releases/download/v0.0.1/Jackal-0.0.1-x64.dmg)
+- [Mac Arm64 .dmg](https://github.com/tpkahlon/jackal-mac/releases/download/0.0.1/Jackal-0.0.1-arm64.dmg)
+- [Mac Intel .dmg](https://github.com/tpkahlon/jackal-mac/releases/download/0.0.1/Jackal-0.0.1-x64.dmg)
 
 <p align="center">
   <img src="./images/root.png" width="500">
