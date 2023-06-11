@@ -44,7 +44,7 @@ jobs:
           ./out/make/*.dmg
           ./out/make/*.deb
           ./out/make/*.rpm
-        asset_name: ${{ matrix.asset_name }}
+        asset_name: YourAppName-v${{ github.run_number }}.zip
         asset_content_type: application/octet-stream
 
     - name: Get release URL
