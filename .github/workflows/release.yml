@@ -10,42 +10,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18'
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
 
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Build Electron app
-      run: npm run make
+      - name: Build Electron app
+        run: npm run make
 
-    - name: Create release
-      id: create_release
-      uses: actions/create-release@v1
-      with:
-        tag_name: v${{ github.run_number }}
-        release_name: Release ${{ github.run_number }}
-        draft: false
-        prerelease: true
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
+          draft: false
+          prerelease: true
 
-    - name: Upload distributables
-      id: upload_assets
-      uses: actions/upload-release-asset@v1
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: |
-          ./out/make/zip/**/*
-          ./out/make/squirrel.windows/**/*
-          ./out/make/*.dmg
-          ./out/make/*.deb
-          ./out/make/*.rpm
-        asset_name: YourAppName-v${{ github.run_number }}.zip
-        asset_content_type: application/octet-stream
+    # - name: Upload distributables
+    #   id: upload_assets
+    #   uses: actions/upload-release-asset@v1
+    #   with:
+    #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+    #     asset_path: |
+    #       ./out/make/zip/**/*
+    #       ./out/make/squirrel.windows/**/*
+    #       ./out/make/*.dmg
+    #       ./out/make/*.deb
+    #       ./out/make/*.rpm
+    #     asset_name: YourAppName-v${{ github.run_number }}.zip
+    #     asset_content_type: application/octet-stream
 
-    - name: Get release URL
-      run: echo "Release URL: ${{ steps.create_release.outputs.html_url }}"
+    # - name: Get release URL
+    #   run: echo "Release URL: ${{ steps.create_release.outputs.html_url }}"
